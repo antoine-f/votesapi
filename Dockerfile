@@ -1,6 +1,5 @@
-FROM node:0.12.4
+FROM nodebase
 ADD package.json /tmp/package.json
-ADD README.md /tmp/README.md
 RUN cd /tmp && npm install
 RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 
